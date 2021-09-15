@@ -13,6 +13,20 @@ const transport = {
     }
 }
 
+// Used for testing
+////////////////////////////////////////
+
+// var transport = {
+//     host: "smtp.mailtrap.io",
+//     port: 2525,
+//     auth: {
+//       user: creds.TESTUSER,
+//       pass: creds.TESTPASS
+//     }
+//   };
+
+////////////////////////////////////////
+
 const transporter = nodemailer.createTransport(transport)
 
 transporter.verify((error, success) => {
