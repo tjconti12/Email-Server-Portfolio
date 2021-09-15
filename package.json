@@ -4,6 +4,9 @@
   "main": "server.js",
   "author": "tjconti12 <78386402+tjconti12@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
