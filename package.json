@@ -1,6 +1,9 @@
 {
   "name": "email-server",
   "version": "0.0.1",
+  "engines": {
+    "yarn": "1.22.10"
+  },
   "main": "server.js",
   "author": "tjconti12 <78386402+tjconti12@users.noreply.github.com>",
   "license": "MIT",
