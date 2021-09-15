@@ -1,0 +1,12 @@
+{
+  "name": "email-server",
+  "version": "0.0.1",
+  "main": "server.js",
+  "author": "tjconti12 <78386402+tjconti12@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.3"
+  }
+}
