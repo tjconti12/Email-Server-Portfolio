@@ -48,6 +48,11 @@ transporter.verify((error, success) => {
     }
 });
 
+
+app.get('/', (req, res) => {
+    res.send('GET request to the homepage')
+});
+
 router.post('/send', (req, res, next) => {
     let name = req.body.name;
     let email = req.body.email
