@@ -6,6 +6,4 @@ module.exports = {
     
     TESTUSER: process.env.TESTUSER,
     TESTPASS: process.env.TESTPASS,
-
-    ENVIRONMENT: process.env.NODE_ENV
 }
