@@ -13,30 +13,29 @@ app.use(express.json());
 app.use('/', router);
 
 
-
-// Nodemailer transport object
-const transport = {
-    host: 'smtp.gmail.com',
-    port: 587,
-    auth: {
-        user: creds.USER,
-        pass: creds.PASS
+if(creds.ENVIRONMENT === "development") {
+    // Used for testing
+    var transport = {
+        host: "smtp.mailtrap.io",
+        port: 2525,
+        auth: {
+        user: creds.TESTUSER,
+        pass: creds.TESTPASS
+        }
+    };
+} else {
+    // Nodemailer transport object
+    const transport = {
+        host: 'smtp.gmail.com',
+        port: 587,
+        auth: {
+            user: creds.USER,
+            pass: creds.PASS
+        }
     }
 }
 
-// Used for testing
-////////////////////////////////////////
 
-// var transport = {
-//     host: "smtp.mailtrap.io",
-//     port: 2525,
-//     auth: {
-//       user: creds.TESTUSER,
-//       pass: creds.TESTPASS
-//     }
-//   };
-
-////////////////////////////////////////
 
 const transporter = nodemailer.createTransport(transport)
 
